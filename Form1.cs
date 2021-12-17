@@ -24,6 +24,17 @@ namespace Pictures
                 Settings.Default.path = value;
             }
         }
+        public bool IsPicture
+        {
+            get
+            {
+                return Settings.Default.IsPicture;
+            }
+            set
+            {
+                Settings.Default.IsPicture = value;
+            }
+        }
         public bool IsMaximize
         {
             get
@@ -39,9 +50,16 @@ namespace Pictures
         public F_Picture()
         {
             InitializeComponent();
-            pb_Picture1.ImageLocation = path;
-            if (path != null)
-               bt_Remove.Enabled = true;
+            //pb_Picture1.ImageLocation = path;
+            if (IsPicture)
+            {
+                pb_Picture1.ImageLocation = path;
+                bt_Remove.Enabled = true;
+            }
+               else
+            {
+                bt_Remove.Enabled = false;
+            }
 
             if (IsMaximize)
             {
@@ -83,7 +101,15 @@ namespace Pictures
             else
                 IsMaximize = false;
 
+            //path = pb_Picture1.ImageLocation;
+            if (pb_Picture1.Image == null)
+                IsPicture = false;
+            else
+            {
+                IsPicture = true;
                 path = pb_Picture1.ImageLocation;
+            }
+                
 
             Settings.Default.Save();
         }

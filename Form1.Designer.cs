@@ -48,7 +48,6 @@ namespace Pictures
             // 
             // bt_Remove
             // 
-            this.bt_Remove.Enabled = false;
             this.bt_Remove.Location = new System.Drawing.Point(226, 31);
             this.bt_Remove.Name = "bt_Remove";
             this.bt_Remove.Size = new System.Drawing.Size(75, 23);

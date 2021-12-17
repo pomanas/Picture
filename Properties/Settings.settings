@@ -5,6 +5,9 @@
     <Setting Name="IsMaximize" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
+    <Setting Name="IsPicture" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
     <Setting Name="path" Type="System.String" Scope="User">
       <Value Profile="(Default)">null</Value>
     </Setting>
